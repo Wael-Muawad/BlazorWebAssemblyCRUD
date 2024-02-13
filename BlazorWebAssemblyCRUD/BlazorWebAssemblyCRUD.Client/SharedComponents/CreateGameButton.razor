@@ -1,0 +1,12 @@
+﻿@inject NavigationManager NavigationManager
+@rendermode InteractiveWebAssembly
+
+<button @onclick="CreateGame" class="btn btn-outline-secondary">Create Game</button>
+
+@code {
+
+    void CreateGame()
+    {
+        NavigationManager.NavigateTo("/editGame");
+    }
+}
