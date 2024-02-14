@@ -19,7 +19,8 @@ builder.Services.AddScoped(ht => new HttpClient()
 });
 
 builder.Services.AddControllers();
-builder.Services.AddIdentity<AppUser,AppRole>()
+builder.Services.AddDbContextFactory<AppDataContext>();
+builder.Services.AddIdentity<AppUser, AppRole>()
     .AddEntityFrameworkStores<AppDataContext>();
 builder.Services.AddScoped<IGameService, ClientGameService>();
 
